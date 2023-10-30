@@ -1,0 +1,275 @@
+$color_1: black;
+$font-family_1: 'Lato', sans-serif;
+
+@import "https://fonts.googleapis.com/css2?family=Lato&display=swap";
+@keyframes textAlpha {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 100;
+	}
+}
+/* TABLET */
+/* Deje la misma estructura de Grid que en desktop */
+/* MOBILE */
+* {
+	padding: 0;
+	margin: 0;
+	font-family: $font-family_1;
+	box-sizing: border-box;
+	overflow-x: hidden;
+}
+body {
+	background-image: linear-gradient( 64.5deg, rgba(245,116,185,1) 14.7%, rgba(89,97,223,1) 88.7% );
+	background-size: 100%;
+	background-repeat: no-repeat;
+	min-height: 100vh;
+}
+.logo {
+	width: 100px;
+	height: 100px;
+	margin-top: 40px;
+	margin-left: 40px;
+}
+.home {
+	text-align: center;
+	margin-top: 100px;
+}
+h1 {
+	color: $color_1;
+	font-family: $font-family_1;
+	font-size: 50px;
+	font-weight: bolder;
+	text-align: center;
+	padding: 20px;
+}
+h2 {
+	color: $color_1;
+	font-family: $font-family_1;
+	font-size: 20px;
+	font-weight: bolder;
+	text-align: center;
+	margin-top: 20px;
+}
+.asideFoto {
+	height: 360px;
+	width: 360px;
+	border-radius: 50%;
+	margin-top: 50px;
+}
+.footerTextCenter {
+	text-align: center;
+	padding: 50px;
+	width: 100%;
+}
+.barraRedesSociales {
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
+	gap: 2rem;
+}
+.tamañoRedesSociales {
+	margin-top: 50px;
+	width: 50px;
+	height: 50px;
+}
+.contenedor {
+	display: grid;
+	grid-template-columns: 60% 40%;
+	grid-template-rows: repeat(4, auto);
+	grid-template-areas: "header header" "nav nav" "mainNav aside" "footer footer";
+}
+#header {
+	grid-area: header;
+}
+#nav {
+	grid-area: nav;
+}
+#mainNav {
+	grid-area: mainNav;
+}
+#aside {
+	grid-area: aside;
+}
+#footer {
+	grid-area: footer;
+}
+.formulario {
+	position: relative;
+	width: 100%;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.label {
+	margin: 10px;
+}
+.letraBoton {
+	color: $color_1;
+	font-family: $font-family_1;
+	font-weight: bolder;
+	padding: 6px;
+}
+#boton {
+	transform: translate(-10px,10px);
+	cursor: pointer;
+	color: $color_1;
+	transition: all 1s;
+	background: rgb(249,184,250);
+	background: radial-gradient(circle, rgba(249,184,250,1) 100%, rgba(70,252,252,1) 100%);
+}
+.contenedorTexto {
+	width: 80%;
+	height: 80%;
+	text-align: center;
+	margin: auto;
+	margin-top: 100px;
+	padding: 40px;
+	border: double black;
+	display: flex;
+	align-items: center;
+	align-content: center;
+	flex-direction: column;
+}
+.tituloContactame {
+	text-align: center;
+	font-size: 30px;
+	padding: 8px;
+}
+.tituloVision {
+	color: $color_1;
+	font-family: $font-family_1;
+	font-weight: bold;
+	font-size: 30px;
+}
+.parrafoVision {
+	color: $color_1;
+	font-family: $font-family_1;
+	font-weight: bold;
+	line-height: 1.5rem;
+	text-align: center;
+}
+.tituloSobreMi {
+	color: $color_1;
+	font-family: $font-family_1;
+	font-weight: bold;
+	font-size: 30px;
+}
+.parrafoSobreMi {
+	color: $color_1;
+	font-family: $font-family_1;
+	font-weight: bold;
+	line-height: 1.5rem;
+	text-align: center;
+}
+.tituloHabilidadesyFormacion {
+	color: $color_1;
+	font-family: $font-family_1;
+	font-weight: bold;
+	font-size: 30px;
+}
+.parrafoHabilidadesFormacion {
+	color: $color_1;
+	font-family: $font-family_1;
+	font-weight: bold;
+	line-height: 1.5rem;
+	text-align: center;
+}
+.contenedorHabilidades {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: repeat(4, auto);
+	grid-template-areas: "headerHabilidades headerHabilidades" "navHabilidades navHabilidades" "mainFormacion asideHabilidades" "footerHabilidades footerHabilidades";
+}
+#headerHabilidades {
+	grid-area: headerHabilidades;
+}
+#navHabilidades {
+	grid-area: navHabilidades;
+}
+#mainFormacion {
+	grid-area: mainFormacion;
+}
+#asideHabilidades {
+	grid-area: asideHabilidades;
+}
+#footerHabilidades {
+	grid-area: footerHabilidades;
+}
+.formacion {
+	margin-top: 50px;
+}
+.habilidades {
+	margin-top: 50px;
+}
+p {
+	animation-name: textAlpha;
+	animation-duration: 1s;
+}
+@media (max-width:768px) {
+	.asideFoto {
+		height: 300px;
+		width: 300px;
+		border-radius: 50%;
+		padding: 20px;
+		display: block;
+		margin: auto;
+	}
+}
+@media (max-width:480px) {
+	.contenedor {
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(5, auto);
+		grid-template-areas: "header" "nav" "mainNav" "aside" "footer";
+	}
+	#header {
+		grid-area: header;
+	}
+	#nav {
+		grid-area: nav;
+	}
+	#mainNav {
+		grid-area: mainNav;
+	}
+	#aside {
+		grid-area: aside;
+	}
+	#footer {
+		grid-area: footer;
+	}
+	.contenedorHabilidades {
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(5, auto);
+		grid-template-areas: "headerHabilidades" "navHabilidades" "mainFormacion" "asideHabilidades" "footerHabilidades";
+	}
+	#headerHabilidades {
+		grid-area: headerHabilidades;
+	}
+	#navHabilidades {
+		grid-area: navHabilidades;
+	}
+	#mainFormacion {
+		grid-area: mainFormacion;
+	}
+	#asideHabilidades {
+		grid-area: asideHabilidades;
+	}
+	#footerHabilidades {
+		grid-area: footerHabilidades;
+	}
+	.formacion {
+		margin-top: 50px;
+	}
+	.habilidades {
+		margin-top: 50px;
+	}
+	.asideFoto {
+		height: 300px;
+		width: 300px;
+		border-radius: 50%;
+		display: block;
+	}
+}
